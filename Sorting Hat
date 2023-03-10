@@ -1,0 +1,33 @@
+public class ChoixMaison {
+
+    // Constantes représentant les 4 maisons
+    public static final int GRYFFONDOR = 0;
+    public static final int SERDAIGLE = 1;
+    public static final int POUFSOUFFLE = 2;
+    public static final int SERPENTARD = 3;
+    
+    /**
+     * Méthode qui affiche les 4 maisons de Poudlard
+     */
+    public static void afficherMaisons() {
+        System.out.println("Les 4 maisons de Poudlard :");
+        System.out.println("0 - Gryffondor");
+        System.out.println("1 - Serdaigle");
+        System.out.println("2 - Poufsouffle");
+        System.out.println("3 - Serpentard");
+    }
+    
+    /**
+     * Méthode qui demande à l'utilisateur de choisir une maison
+     * @return le numéro de la maison choisie par l'utilisateur
+     */
+    public static int choisirMaison() {
+        Scanner scanner = new Scanner(System.in);
+        int choix;
+        do {
+            System.out.print("Choisissez une maison (0-3) : ");
+            choix = scanner.nextInt();
+        } while (choix < 0 || choix > 3);
+        return choix;
+    }
+}
